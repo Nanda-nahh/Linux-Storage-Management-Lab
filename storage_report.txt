@@ -1,0 +1,31 @@
+
+#!/bin/bash
+
+echo " " 
+echo "LINUX STORAGE REPORT"
+echo " "
+echo " " 
+
+echo "Date and Time:"
+date 
+echo " "
+
+echo "Hostname:"
+hostname 
+echo " "
+
+echo "Storage Devices and Partitions:"
+lsblk 
+echo " " 
+
+echo "Filesystem Information:" 
+blkid 
+echo " "
+
+echo "Mounted Filesystems:"
+df -h 
+echo " " 
+
+echo "Storage report generated successfully."
+
+
