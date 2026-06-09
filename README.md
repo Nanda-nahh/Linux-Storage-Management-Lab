@@ -28,59 +28,58 @@ The project was performed on a Red Hat Enterprise Linux-based virtual machine as
 
 Used the following commands to inspect existing storage devices and partitions:
 
-```bash
+
 lsblk
 fdisk -l
-```
 
 ### 2. Create a New Partition
 
 Created a primary partition on the newly added disk.
 
-```bash
+
 fdisk /dev/sdb
-```
+
 
 ### 3. Create an XFS Filesystem
 
 Formatted the partition with the XFS filesystem.
 
-```bash
+
 mkfs.xfs /dev/sdb1
-```
+
 
 ### 4. Verify Filesystem Information
 
 Checked filesystem details and UUID information.
 
-```bash
+
 blkid /dev/sdb1
-```
+
 
 ### 5. Create a Mount Point
 
 Created a directory to serve as the mount point.
 
-```bash
+
 mkdir /data
-```
+
 
 ### 6. Mount the Filesystem
 
 Mounted the new filesystem to the system.
 
-```bash
+
 mount /dev/sdb1 /data
-```
+
 
 ### 7. Verify Storage Configuration
 
 Confirmed successful mounting and storage availability.
 
-```bash
+
 df -h
 lsblk
-```
+
 
 ## Project Outcome
 
@@ -103,5 +102,4 @@ Successfully added and configured a new storage device, created an XFS filesyste
 ## Author
 
 Nandana Mohan J
-Linux System Administration Learning Project
 
